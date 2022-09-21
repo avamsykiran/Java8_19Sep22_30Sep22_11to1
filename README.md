@@ -30,6 +30,19 @@ Expectations
         significance  oF getClass
         significance  of wait,yeild,notify and notifyAll
 
+    Wrapper Classes
+    Boxing and UnBoxing
+        
+        int x = 45;
+        Integer obj = new Integer(x); //boxing
+        int y = obj.getValue(); //unboxing
+
+    AutoBoxing and AutoUnBoxing
+
+        int x = 45;
+        Integer obj = x; //auto-boxing
+        int y = obj//auto-unboxing
+
     String
         why are strings immutable ?
         aware of all string constructors
@@ -104,3 +117,42 @@ java.time
 
     Duration            .between        distence b/w two times
     Period              .between        distence b/w two dates
+
+java.util
+-------------------------------------------------------
+
+    utitlity legacy classes
+        Scanner
+        Random
+    
+    collections is java's approach to data-structures
+
+        Generics and WildCards
+
+        Collection      add,remove,contains,size,isEmpty,stream
+            |- List     index based operatiosn and duplicate entires and multiple nulls are possible
+            |- Set      no duplicate entries and a maximum of single null are possible, and no index based operations
+
+        Map             put,set,get,isEmpty,size,containsKey,containsValue,keySet
+
+            List Implementations
+                Vector              growable array and is synchronized/thread-safe
+                ArrayList           growable array
+                LinkedList          double-linked list
+
+            Set Implementations
+                HashSet             does not guarentee any order for retrival
+                TreeSet             guarentees sorted order for retrival
+                LinkedHashSet       guarentees entry order for retrival
+
+            java.lang.Comprable     default comparision strategy
+            java.util.Comparator    additional / customized comparasion
+
+            Map Implementations
+                HashMap             does not guarentee any order for retrival
+                TreeMap             guarentees sorted on keys order for retrival 
+                LinkedHashMap       guarentees entry order for retrival
+
+        Collections
+
+    functional interfaces, lambda expressions and streams api
