@@ -155,4 +155,30 @@ java.util
 
         Collections
 
-    functional interfaces, lambda expressions and streams api
+functional interfaces
+-------------------------------------------------------
+
+    interfaces
+    marker interfaces           an interface with zero methods or fields        java.io.Serializable
+    functional interfaces       an interface with one and only abstract method  java.util.Comparator, java.lang.Comparable
+
+    @FunctionalInterface
+
+        Supplier            returns but takes no-args
+        Consumer            takes args but returns void
+        Predicate           alwasy returns boolean 
+        Functional
+
+    java.util.function
+
+lambda expressions 
+-------------------------------------------------------
+
+    MyFunctionalInterface obj = (params) -> (returnValue)
+    MyFunctionalInterface obj = (params) -> {
+        //.........
+        return returnValue;
+    }
+
+streams api - java.util.stream
+----------------------------------------------------------
