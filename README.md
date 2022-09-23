@@ -182,3 +182,73 @@ lambda expressions
 
 streams api - java.util.stream
 ----------------------------------------------------------
+
+    Stream 
+
+        Collection::stream()
+        Arrays.stream()
+        Stream.of()
+
+        Stream filter(Predicate)                            intermidate operation
+        Stream map(Transform)                               intermidate operation
+
+        Optional<> reduce(BinaryOperator accumulator)       terminal operation
+        void forEach(Consumer)                              terminal operation    
+        Collection collect(Collector)                       terminal operation    
+
+
+        Stream s1 = Stream.of(1,2,3,4,5,6,7,8,9);
+
+        s1                                                              1,2,3,4,5,6,7,8,9
+            .filter(n -> n%2==0)                                        2,4,6,8
+            .map( x -> x*x )                                            4,16,36,64
+            .reduce( (a,b) -> (a+b) )                                   120
+
+        Stream.of("Vamsy","Komal","Vinay","Amit")
+            .map( ele -> "Hello " + ele)
+            .forEach(System.out::println)                               
+                                                        Hello Vamsy
+                                                        Hello Koaml
+                                                        Hello Vinay
+                                                        Hello Amit
+
+        
+        Stream.of("Vamsy","Komal","Vinay","Amit")
+            .map( ele -> "Hello " + ele)
+            .collect(Collectors.toList())    
+
+        
+        Stream.of("Vamsy","Komal","Vinay","Amit")
+            .map( ele -> "Hello " + ele)
+            .collect(Collectors.toSet())    
+
+java.io, java.nio - input output streams
+-------------------------------------------------------------------------
+
+
+    Binary Streams 
+        reading and writing data in binary format 
+
+        java.io
+            InputStream                                 java.lang.System.in   
+                |-FileInputStream
+                |-ObjectInputStream
+            
+            OutputStream
+                |-FileOutputStream
+                |-ObjectOutputStream
+                |-PrintStream                           java.lang.System.out , java.lang.System.err
+
+        
+    Character Streams / Text Streams
+        reading and writing data in text format (characters)
+
+        java.io
+            Reader
+                |-InputStreamReader
+                |-BufferedReader
+                |-FileReader
+
+            Writer
+                |-FileWriter
+                |-PrintWriter
