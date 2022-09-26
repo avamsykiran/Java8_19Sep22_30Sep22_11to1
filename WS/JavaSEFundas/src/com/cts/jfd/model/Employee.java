@@ -1,8 +1,11 @@
 package com.cts.jfd.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Employee implements Comparable<Employee> {
+public class Employee implements Comparable<Employee>,Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private int empId;
 	private String fullName;

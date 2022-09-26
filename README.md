@@ -225,7 +225,6 @@ streams api - java.util.stream
 java.io, java.nio - input output streams
 -------------------------------------------------------------------------
 
-
     Binary Streams 
         reading and writing data in binary format 
 
@@ -238,7 +237,6 @@ java.io, java.nio - input output streams
                 |-FileOutputStream
                 |-ObjectOutputStream
                 |-PrintStream                           java.lang.System.out , java.lang.System.err
-
         
     Character Streams / Text Streams
         reading and writing data in text format (characters)
@@ -252,3 +250,18 @@ java.io, java.nio - input output streams
             Writer
                 |-FileWriter
                 |-PrintWriter
+
+    java.nio
+
+        Paths
+        Files
+
+Assignment
+-------------------------------------------------------------------------------
+
+    Develop a java console based menu-driven application that can perform 
+    CRUD operation on Employee Model. The data must be persisted in a bianry file.
+        C- Create
+        R- Retrive
+        U- Update and
+        D- Delete
