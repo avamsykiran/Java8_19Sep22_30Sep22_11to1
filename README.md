@@ -256,6 +256,16 @@ java.io, java.nio - input output streams
         Paths
         Files
 
+
+Multi Layer Archetecture
+-------------------------------------------------------------------------------
+
+            DAO     <--------->     SERVICE     <-------->      UI
+        Persistence             Bussiness Logic          Presentation Logic
+
+        exception
+        model
+
 Assignment
 -------------------------------------------------------------------------------
 
@@ -264,4 +274,4 @@ Assignment
         C- Create
         R- Retrive
         U- Update and
-        D- Delete
+        D- Delete        
