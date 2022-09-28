@@ -1,10 +1,12 @@
 package com.cts.hrm;
 
+import com.cts.hrm.ui.EmployeeUI;
+
 public class HRMApplication {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		EmployeeUI eui = new EmployeeUI();
+		eui.run();
 	}
 
 }
